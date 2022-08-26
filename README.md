@@ -1,2 +1,2 @@
 # website
-Deeeep.io Reef Client's (website)[https://deeeep-reef-client.netlify.app]
+Deeeep.io Reef Client's [website](https://deeeep-reef-client.netlify.app)
