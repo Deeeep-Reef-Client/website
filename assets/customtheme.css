@@ -1,10 +1,10 @@
-.home-page .home-bg[data-v-66e17a26] {
+.home-page .home-bg {
     background-image: url(/assets/bgimage.png);
 }
-.vfm--overlay[data-v-6917f53d] {
+.vfm--overlay {
     background-color: rgba(0, 0, 0, 0.3);
 }
-.dark [data-v-daae3c72] .modal-content {
+.dark .modal-content {
     --tw-bg-opacity: 0.3;
     background-color: rgba(31,41,55,var(--tw-bg-opacity));
     --tw-border-opacity: 1;
