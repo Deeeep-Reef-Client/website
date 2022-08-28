@@ -5,8 +5,5 @@
     background-color: rgba(0, 0, 0, 0.3) !important;
 }
 .dark .modal-content {
-    --tw-bg-opacity: 0.3;
-    background-color: rgba(31,41,55,var(--tw-bg-opacity)) !important;
-    --tw-border-opacity: 1;
-    border-color: rgba(55,65,81,var(--tw-border-opacity)) !important;
+    background-color: rgba(31,41,55,0.3) !important;
 }
