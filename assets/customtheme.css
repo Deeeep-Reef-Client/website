@@ -7,3 +7,6 @@
 .dark .modal-content {
     background-color: rgba(31, 41, 55, 0.3) !important;
 }
+.dark body .el-input__wrapper, .dark body .el-textarea__wrapper {
+    background-color: rgba(17, 24, 39, 0.3) !important;
+}
