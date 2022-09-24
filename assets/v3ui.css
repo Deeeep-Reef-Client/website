@@ -19,15 +19,15 @@
     margin-bottom: -10vh !important;
 }
 /*XP bar*/
-.animal-data {
+.stats .animal-data {
     transform: rotate(90deg) !important;
     left: 50vw !important;
-    bottom: -43vh !important;
+    margin-bottom: calc(-40vw + 30px) !important;
     border-radius: 99px !important;
 }
 .animal-data .animal {
     width: 2rem !important;
-    height: 80vw !important;
+    height: 60vw !important;
     background-color: #0003 !important;
     border-radius: 99px !important;
     margin: auto !important;
