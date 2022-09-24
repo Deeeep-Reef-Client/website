@@ -22,7 +22,7 @@
 .stats .animal-data {
     transform: rotate(90deg) !important;
     left: 50vw !important;
-    margin-bottom: calc(-40vw + 30px) !important;
+    margin-bottom: calc(-30vw + 30px) !important;
     border-radius: 99px !important;
 }
 .animal-data .animal {
