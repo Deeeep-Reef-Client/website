@@ -1,0 +1,47 @@
+/*Boost bar*/
+.stats .middle .boosts {
+    transform: rotate(-90deg) !important;
+    margin-left: calc(-100vw + 3rem) !important;
+    margin-bottom: 10vw !important;
+    width: 20vw !important;
+}
+.rounded-tl-xl {
+    border-radius: 0.75rem 0 0 0.75rem !important;
+}
+.rounded-tr-xl {
+    border-radius: 0 0.75rem 0.75rem 0 !important;
+}
+.rounded-t-xl {
+    border-radius: 0.75rem !important;
+}
+/*Biome meters*/
+.stats .middle .meters {
+    margin-bottom: -10vh !important;
+}
+/*XP bar*/
+.animal-data {
+    transform: rotate(90deg) !important;
+    left: 50vw !important;
+    bottom: -43vh !important;
+    border-radius: 99px !important;
+}
+.animal-data .animal {
+    width: 2rem !important;
+    height: 80vw !important;
+    background-color: #0003 !important;
+    border-radius: 99px !important;
+    margin: auto !important;
+}
+.animal-data .animal .inner .image {
+    display: none !important;
+}
+.animal-data .hotkey {
+    display: none !important;  
+}
+.animal-data .animal .inner .xp-indicator {
+    transform: rotate(-90deg) !important;
+    white-space: nowrap !important;
+}
+.animal-data .detailed-info {
+    display: none !important;
+}

@@ -1,0 +1,118 @@
+@font-face {
+    font-family: quicksand;
+    src: url(/styles/fonts/Quicksand-Regular.ttf);
+}
+
+body {
+    font-family: quicksand;
+    margin: 0px;
+    background-color: #1c395f;
+    user-select: none;
+}
+
+a {
+    color: #6a9eff;
+}
+
+a:visited {
+    color: #6a9eff;
+}
+
+.spacer {
+    width: 10px;
+    height: 10px;
+}
+
+.navbar {
+    background-color: #6a9eff;
+    font-size: 20px;
+    overflow: hidden;
+}
+
+.navbar>a {
+    float: left;
+    text-align: center;
+    font-weight: bold;
+    margin: 15px 15px;
+    color: black;
+    text-decoration: none;
+}
+
+.navbar>a:hover {
+    background-color: #a0c1ff;
+}
+
+.top-logo {
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+}
+
+.header {
+    position: relative;
+    height: 100vh;
+}
+
+.header-background {
+    height: 100vh;
+    width: 100vw;
+    filter: blur(10px);
+    pointer-events: none;
+}
+
+.header-inner {
+    position: absolute;
+    top: 35%;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    margin: auto;
+}
+
+.download {
+    width: 100px;
+    padding-left: 20px;
+    border-radius: 20px;
+    border: 0px;
+    height: 45px;
+    width: fit-content;
+    padding-right: 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #2e6df5;
+    line-height: 1;
+}
+
+.download:hover {
+    background-color: #2760da;
+}
+
+.main {
+    align-items: center;
+    padding: 30px;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    position: absolute;
+    color: white;
+}
+
+.main-container {
+    max-width: 60%;
+    padding: 15px;
+}
+
+.section {
+    border-radius: 25px;
+    background-color: #234775;
+    padding: 10px;
+    margin: 20px;
+}
+.section:hover {
+    background-color: #274e81;
+}
