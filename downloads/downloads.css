@@ -1,0 +1,6 @@
+.download-link {
+    color: white !important;
+}
+.download-list > * {
+    display: block;
+}
