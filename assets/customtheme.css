@@ -17,3 +17,6 @@
 .loading-container {
     background-image: url(bgimage.png) !important;
 }
+.animals-container .animals .animal {
+    --tw-bg-opacity: 0.3 !important
+}
