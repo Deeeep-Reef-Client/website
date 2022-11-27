@@ -11,6 +11,9 @@
 .dark body .el-input__wrapper, .dark body .el-textarea__wrapper {
     background-color: rgba(17, 24, 39, 0.5) !important;
 }
+.dark body .el-input__wrapper > .el-input__inner {
+    color: white !important;
+}
 .loading-container {
     background-image: url(bgimage.png) !important;
 }
