@@ -1,1 +1,1 @@
-https://github.com/Deeeep-Reef-Client/deeeep-reef-client/releases/download/v0.8.0-beta/Deeeep.io-Reef-Client-Setup-0.8.0.exe
+https://github.com/Deeeep-Reef-Client/deeeep-reef-client/releases/download/v0.9.0-beta/Deeeep.io-Reef-Client-Setup-0.9.0.exe
