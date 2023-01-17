@@ -32,8 +32,7 @@
                 <h1 class="name">Downloads</h1>
                 <h2>Deeeep.io Reef Client</h2>
             </div>
-            <button class="download"
-                onclick="(async () => {
+            <button class="download" onclick="(async () => {
                     var url = await fetch('/api/insturl.txt').then(res=> res.text())
                     .catch(err => {
                     alert('Error fetching installer URL. Please try again or manually download the installer from GitHub Releases.')
@@ -101,6 +100,9 @@
                     released.</p>
                 <p><a href="docs/changelog">Changelog</a></p>
                 <div class="download-list">
+                    <a class="download-link"
+                        href="https://github.com/Deeeep-Reef-Client/deeeep-reef-client/releases/tag/v0.9.1-beta">v0.9.1
+                        beta The Prerelease Patch</a>
                     <a class="download-link"
                         href="https://github.com/Deeeep-Reef-Client/deeeep-reef-client/releases/tag/v0.9.0-beta">v0.9.0
                         beta The Prerelease Update</a>
