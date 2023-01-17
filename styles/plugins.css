@@ -1,0 +1,39 @@
+.plugins-main {
+    display: flex;
+    justify-content: center;
+}
+
+.plugin-section-heading {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.plugins-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.plugin-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 20vw;
+    border-radius: 25px;
+    margin: 20px;
+    color: white;
+    background-color: #234775;
+}
+
+.plugin-wrapper>* {
+    margin: 20px;
+}
+
+.plugin-wrapper:hover {
+    background-color: #274e81;
+}
+
+.plugin-author {
+    font-size: 0.9em;
+}

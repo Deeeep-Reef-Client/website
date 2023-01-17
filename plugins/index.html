@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Plugins | Deeeep.io Reef Client</title>
+    <meta name="description" content="A list of Deeeep.io Reef Client plugins.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/styles/main.css">
+    <link rel="stylesheet" type="text/css" href="/styles/plugins.css">
+</head>
+
+<body>
+    <nav>
+        <nav class="navbar">
+            <img class="top-logo" src="/assets/rounded_favicon.png" alt="DRC logo" onclick="window.location.href='/'">
+            <a href="/">Home</a>
+            <a href="/#features">Why DRC?</a>
+            <a href="/downloads">Download</a>
+            <a href="/docs">Documentation</a>
+            <a href="https://github.com/Deeeep-Reef-Client/deeeep-reef-client">GitHub</a>
+        </nav>
+        </div>
+    </nav>
+    <div class="header">
+        <img class="header-background" src="/assets/bgimage.png" alt="DRC background image">
+        <div class="header-inner">
+            <div id="title">
+                <h1 class="name">Plugins</h1>
+                <h2>A list of DRC plugins, fetched from the official registry</h2>
+            </div>
+        </div>
+    </div>
+    <div class="plugins-main">
+        <div style="display:block">
+            <h2 class="plugin-section-heading">Plugins</h2>
+            <div class="plugins-container" id="pluginsContainer">
+            </div>
+
+            <h2 class="plugin-section-heading">Themes</h2>
+            <div class="plugins-container" id="themesContainer">
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        (async () => {
+            const allPlugins = await fetch("https://deeeep-reef-client.github.io/plugins-api/registry.json")
+                .then(response => response.json());
+
+            const plugins = allPlugins.list.filter(plugin => plugin.type === "plugin");
+            const themes = allPlugins.list.filter(plugin => plugin.type === "theme");
+
+            const pluginsContainer = document.getElementById("pluginsContainer");
+            const themesContainer = document.getElementById("themesContainer");
+
+            for (let i in plugins) {
+                const pluginElem = document.createElement("div");
+                pluginElem.classList.add("plugin-wrapper");
+                pluginElem.setAttribute("id", plugins[i].id)
+
+                const nameElem = document.createElement("h2");
+                nameElem.innerText = plugins[i].name;
+                pluginElem.appendChild(nameElem);
+
+                const descElem = document.createElement("p");
+                descElem.innerText = plugins[i].description;
+                pluginElem.appendChild(descElem);
+
+                const authorElem = document.createElement("p");
+                authorElem.innerText = "By " + plugins[i].author;
+                authorElem.classList.add("plugin-author");
+                pluginElem.appendChild(authorElem);
+
+                pluginsContainer.appendChild(pluginElem);
+            }
+
+            for (let i in themes) {
+                const pluginElem = document.createElement("div");
+                pluginElem.classList.add("plugin-wrapper");
+                pluginElem.setAttribute("id", themes[i].id)
+
+                const nameElem = document.createElement("h2");
+                nameElem.innerText = themes[i].name;
+                pluginElem.appendChild(nameElem);
+
+                const descElem = document.createElement("p");
+                descElem.innerText = themes[i].description;
+                pluginElem.appendChild(descElem);
+
+                const authorElem = document.createElement("p");
+                authorElem.innerText = "By " + themes[i].author;
+                authorElem.classList.add("plugin-author");
+                pluginElem.appendChild(authorElem);
+
+                themesContainer.appendChild(pluginElem);
+            }
+        })();
+    </script>
+</body>
