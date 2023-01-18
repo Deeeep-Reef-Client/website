@@ -36,10 +36,12 @@
         <div style="display:block">
             <h2 class="plugin-section-heading">Plugins</h2>
             <div class="plugins-container" id="pluginsContainer">
+                <p>loading...</p>
             </div>
 
             <h2 class="plugin-section-heading">Themes</h2>
             <div class="plugins-container" id="themesContainer">
+                <p>loading...</p>
             </div>
         </div>
     </div>
@@ -54,6 +56,9 @@
 
             const pluginsContainer = document.getElementById("pluginsContainer");
             const themesContainer = document.getElementById("themesContainer");
+
+            pluginsContainer.innerHTML = "";
+            themesContainer.innerHTML = "";
 
             for (let i in plugins) {
                 const pluginElem = document.createElement("div");
@@ -70,6 +75,13 @@
 
                 const authorElem = document.createElement("p");
                 authorElem.innerText = "By " + plugins[i].author;
+                if (plugins[i].author === "Dev") {
+                    const verifiedElem = document.createElement("img");
+                    verifiedElem.src = "/assets/verified.png";
+                    verifiedElem.setAttribute("height", "20px");
+                    verifiedElem.setAttribute("width", "20px");
+                    authorElem.appendChild(verifiedElem);
+                }
                 authorElem.classList.add("plugin-author");
                 pluginElem.appendChild(authorElem);
 
