@@ -32,3 +32,12 @@
 .dark .forum-post-page .inner {
     --tw-bg-opacity: 0.3 !important
 }
+
+div.loading-bar > img.ball {
+    display: block;
+    box-sizing: border-box;
+    background: url(loadingball.png) no-repeat;
+    width: 128px;
+    height: 64px;
+    padding-left: 128px;
+}
