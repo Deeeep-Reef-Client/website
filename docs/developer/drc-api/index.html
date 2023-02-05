@@ -25,7 +25,7 @@
     </script>
 
     <!-- Replace the title name -->
-    <title>Changelog | Deeeep.io Reef Client Docs</title>
+    <title>Plugins API | Deeeep.io Reef Client Docs</title>
 </head>
 
 <body style="font-family: 'Quicksand', sans-serif" class="dark:bg-slate-900 bg-white dark:text-white">
@@ -119,7 +119,7 @@
                             <a href="/docs/developer/plugins-api">Plugins API</a>
                         </li>
                         <li class="text-[#111] dark:text-slate-300 pl-[20px] font-[400] border-l-[2px]">
-                            <a href="/docs/developer/drc-api">DRC API</a>
+                            <a href="#">DRC API</a>
                         </li>
                         <li class="text-[#111] dark:text-slate-300 pl-[20px] font-[400] border-l-[2px]">
                             <a href="/docs/developer/building">Building</a>
@@ -136,7 +136,7 @@
                 </li>
             </ul>
             </li>
-            <li class="font-medium"><a href="#">Changelog</a></li>
+            <li class="font-medium"><a href="/docs/changelog">Changelog</a></li>
             </ul>
         </nav>
         <!-- Side Menu ends here -->
@@ -146,116 +146,64 @@
             <!-- Link1 start -->
             <section id="header">
                 <div class="h-full mt-10">
-                    <p class="font-normal text-3xl">Changelog</p>
+                    <p class="font-normal text-3xl">DRC API</p>
                     <p class="leading-0">
-                        Logs changes and updates made to the Client.
+                        The DRC API is a set of utilities commonly used in plugins and within the client itself.
                     </p>
                 </div>
             </section>
-            <section id="changelog">
+            <section id="api">
                 <div class="h-full mt-10">
-                    <p class="font-normal text-2xl">v0.9.1 (beta) The Prerelease Patch</p>
-                    <ul class="list-disc">
-                        <li>Theme maker works on the Forum</li>
-                        <li>Client does not crash when loading window is closed</li>
-                        <li>Loading window works offline</li>
-                        <li>More efficient account swapper</li>
-                        <li>lue evolution tree button</li>
-                    </ul>
+                    <p class="font-normal text-3xl">The API</p>
+                    <p class="leading-0">
+                        The DRC API can be accessed in Preload as <code>DRC.*</code> namespace, and exposed in browser
+                        context as <code>DRC_API.DRC.*</code> namespace.
+                    </p>
                     <br />
-                    <p class="font-normal text-2xl">v0.9.0 (beta) The Prerelease Update</p>
-                    <ul class="list-disc">
-                        <li>Added a loading screen</li>
-                        <li>Added a "developer mode"</li>
-                        <li>Auto fill name</li>
-                        <li>Account save and swapper</li>
-                        <li>Fixed Client not working in PD and 1v1</li>
-                        <li>In-game button to open evolution tree</li>
-                        <li>Setting to view ghosts</li>
-                        <li>Press "X" while as ghost to end game</li>
-                        <li>Press "C" to cancel boost (for touchpad)</li>
-                    </ul>
+
+                    <p class="font-normal text-2xl">Client</p>
+                    <p class="leading-0">Some information on the client.</p>
                     <br />
-                    <p class="font-normal text-2xl">v0.8.0 (beta) The Adblocker Update</p>
-                    <ul class="list-disc">
-                        <li>A togglable Adblocker to block advertisements</li>
-                        <li>Hotkey "V" does not open evolution tree if not in game</li>
-                        <li>DRC modal overlays now have a blur</li>
-                    </ul>
+                    <p class="leading-0">
+                    <p class="font-normal text-xl"> <code>Client.Name</code></p>
+                    <code>string</code><br />
+                    Name of the Client. (Deeeep.io Reef Client)
+                    </p>
+                    <p class="leading-0">
+                    <p class="font-normal text-xl"> <code>Client.Version</code></p>
+                    <code>string</code><br />
+                    Semantic version of the client. (&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;)
+                    </p>
+                    <p class="leading-0">
+                    <p class="font-normal text-xl"> <code>Client.VersionTag</code></p>
+                    <code>string</code><br />
+                    Release tag of the client. (&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;&lt;-alpha/-beta/(none)&gt;)
+                    </p>
                     <br />
-                    <p class="font-normal text-2xl">v0.7.0 (beta) The Plugins Update</p>
-                    <ul class="list-disc">
-                        <li>A plugins system! Find and install plugins and themes from the registry!</li>
-                    </ul>
+
+                    <p class="font-normal text-2xl">Preload</p>
+                    <p class="leading-0">Utilities on the Preload.</p>
                     <br />
-                    <p class="font-normal text-2xl">v0.6.1 (beta) The Misc Update</p>
-                    <ul class="list-disc">
-                        <li>Transparency slider is no longer an opacity slider (it goes left to right ascending
-                            transparency instead of right to left)</li>
-                        <li>Press "V" to toggle evolution tree</li>
-                        <li>Press "F12" to open DevTools</li>
-                    </ul>
+                    <p class="leading-0">
+                    <p class="font-normal text-xl"> <code>Preload.EvalInBrowserContext</code></p>
+                    <code>function (str: string): void</code><br />
+                    Takes a string and evaluates in the browser context.<br />
+                    Parameter <code>str</code> is used to specify the JavaScript source to be evaluated.<br />
+                    </p>
                     <br />
-                    <p class="font-normal text-2xl">v0.6.0 (beta) The Theme Maker Update</p>
-                    <ul class="list-disc">
-                        <li>A theme maker! Create your own custom themes, use and share them!</li>
-                    </ul>
+
+                    <p class="font-normal text-2xl">Modal</p>
+                    <p class="leading-0">Utilities on modals.</p>
                     <br />
-                    <p class="font-normal text-2xl">v0.5.0 (beta) The Light Theme Update</p>
-                    <ul class="list-disc">
-                        <li>Light theme :D</li>
-                    </ul>
-                    <br />
-                    <p class="font-normal text-2xl">v0.4.2 (beta) The Autoupdater Patch</p>
-                    <ul class="list-disc">
-                        <li>The auto updater actually works now</li>
-                    </ul>
-                    <br />
-                    <p class="font-normal text-2xl">v0.4.1 (beta) The QoL Update</p>
-                    <ul class="list-disc">
-                        <li>The icon now has rounded corners to avoid hurting your eyes</li>
-                        <li>Client shows DRC version too</li>
-                    </ul>
-                    <br />
-                    <p class="font-normal text-2xl">v0.4.0 (beta) The Autoupdater Update</p>
-                    <ul class="list-disc">
-                        <li>An auto updater :)</li>
-                    </ul>
-                    <br />
-                    <p class="font-normal text-2xl">v0.3.2 (beta) The Asset Swapper Patch 2</p>
-                    <ul class="list-disc">
-                        <li>Fixed asset swapper for non-docassets users</li>
-                    </ul>
-                    <br />
-                    <p class="font-normal text-2xl">v0.3.1 (beta) The Asset Swapper Patch</p>
-                    <ul class="list-disc">
-                        <li>Installer is now patched and works with the new feature!</li>
-                    </ul>
-                    <br />
-                    <p class="font-normal text-2xl">v0.3.0 (beta) The Asset Swapper Update</p>
-                    <ul class="list-disc">
-                        <li>An asset swapper to swap your skins!</li>
-                    </ul>
-                    <br />
-                    <p class="font-normal text-2xl">v0.2.0 (alpha) The Evolution Update</p>
-                    <ul class="list-disc">
-                        <li>Evolution tree button</li>
-                        <li>V3 game UI (still buggy)</li>
-                        <li>New installer that actually works</li>
-                    </ul>
-                    <br />
-                    <p class="font-normal text-2xl">v0.1.0 (alpha) The Settings Update</p>
-                    <ul class="list-disc">
-                        <li>Settings are now locally stored, and custom theme and docassets are now togglable</li>
-                        <li>Docassets now comes built in in the client</li>
-                    </ul>
-                    <br />
-                    <p class="font-normal text-2xl">v0.0.0 (alpha) Initial Release</p>
-                    <ul class="list-disc">
-                        <li>Initial alpha release</li>
-                        <li>The journey begins.</li>
-                    </ul>
-                    <br />
+
+                    <p class="leading-0">
+                    <p class="font-normal text-xl"> <code>Modal.BuildModal</code></p>
+                    <code>function (id: string, title: string, content: string): HTMLDivElement</code><br />
+                    Takes arguments about the modal and returns the modal element.<br />
+                    Parameter <code>id</code> is used to specify the HTML ID of the modal.<br />
+                    Parameter <code>title</code> is used to specify the title of the modal.<br />
+                    Parameter <code>content</code> is used to specify the HTML content.<br />
+                    </p>
                 </div>
             </section>
         </div>
