@@ -40,4 +40,6 @@ div.loading-bar > img.ball {
     width: 128px;
     height: 64px;
     padding-left: 128px;
+div.loading-bar > div {
+    background-color: #ecdc9a !important;
 }
