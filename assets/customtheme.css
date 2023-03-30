@@ -34,12 +34,14 @@
 }
 
 div.loading-bar > img.ball {
-    display: block;
-    box-sizing: border-box;
-    background: url(loadingball.png) no-repeat;
-    width: 128px;
-    height: 64px;
-    padding-left: 128px;
+    display: block !important;
+    box-sizing: border-box !important;
+    background: url(loadingball.png) no-repeat !important;
+    width: 128px !important;
+    height: 64px !important;
+    padding-left: 128px !important;
+}
+
 div.loading-bar > div {
     background-color: #ecdc9a !important;
 }
