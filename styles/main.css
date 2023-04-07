@@ -116,3 +116,10 @@ a:visited {
 .section:hover {
     background-color: #274e81;
 }
+
+.screenshot {
+    border-radius: 25px;
+    width: 20vw;
+    margin: 20px;
+    margin-top: 10px;
+}
