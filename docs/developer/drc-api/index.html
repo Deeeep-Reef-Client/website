@@ -165,17 +165,17 @@
                     <p class="leading-0">Some information on the client.</p>
                     <br />
                     <p class="leading-0">
-                    <p class="font-normal text-xl"> <code>Client.Name</code></p>
+                    <p class="font-normal text-xl"> <code>Client.name</code></p>
                     <code>string</code><br />
                     Name of the Client. (Deeeep.io Reef Client)
                     </p>
                     <p class="leading-0">
-                    <p class="font-normal text-xl"> <code>Client.Version</code></p>
+                    <p class="font-normal text-xl"> <code>Client.version</code></p>
                     <code>string</code><br />
                     Semantic version of the client. (&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;)
                     </p>
                     <p class="leading-0">
-                    <p class="font-normal text-xl"> <code>Client.VersionTag</code></p>
+                    <p class="font-normal text-xl"> <code>Client.versionTag</code></p>
                     <code>string</code><br />
                     Release tag of the client. (&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;&lt;-alpha/-beta/(none)&gt;)
                     </p>
@@ -185,7 +185,7 @@
                     <p class="leading-0">Utilities on the Preload.</p>
                     <br />
                     <p class="leading-0">
-                    <p class="font-normal text-xl"> <code>Preload.EvalInBrowserContext</code></p>
+                    <p class="font-normal text-xl"> <code>Preload.evalInBrowserContext</code></p>
                     <code>function (str: string): void</code><br />
                     Takes a string and evaluates in the browser context.<br />
                     Parameter <code>str</code> is used to specify the JavaScript source to be evaluated.<br />
@@ -197,7 +197,7 @@
                     <br />
 
                     <p class="leading-0">
-                    <p class="font-normal text-xl"> <code>Modal.BuildModal</code></p>
+                    <p class="font-normal text-xl"> <code>Modal.buildModal</code></p>
                     <code>function (id: string, title: string, content: string): HTMLDivElement</code><br />
                     Takes arguments about the modal and returns the modal element.<br />
                     Parameter <code>id</code> is used to specify the HTML ID of the modal.<br />
@@ -207,7 +207,7 @@
                     <br />
 
                     <p class="leading-0">
-                    <p class="font-normal text-xl"> <code>Modal.BuildTab</code></p>
+                    <p class="font-normal text-xl"> <code>Modal.buildTab</code></p>
                     <code>function (id: string, content: { content: string, name: string }[], parent: HTMLElement): HTMLDivElement</code><br />
                     Takes arguments about the tabs and builds a multi-tabbed modal. Tab will automatically be appended to <code>parent</code>, and the element returned.<br />
                     Parameter <code>id</code> is used to specify the HTML ID of the modal.<br />
