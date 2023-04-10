@@ -209,12 +209,110 @@
                     <p class="leading-0">
                     <p class="font-normal text-xl"> <code>Modal.buildTab</code></p>
                     <code>function (id: string, content: { content: string, name: string }[], parent: HTMLElement): HTMLDivElement</code><br />
-                    Takes arguments about the tabs and builds a multi-tabbed modal. Tab will automatically be appended to <code>parent</code>, and the element returned.<br />
+                    Takes arguments about the tabs and builds a multi-tabbed modal. Tab will automatically be appended
+                    to <code>parent</code>, and the element returned.<br />
                     Parameter <code>id</code> is used to specify the HTML ID of the modal.<br />
                     Parameter <code>content</code> is used to specify the content of the modal.<br />
-                    - Parameter <code>content</code> is used to specify the HTML content of the modal.<br/>
-                    - Parameter <code>name</code> is used to specify the name of the modal, as shown in the side pane.<br/>
+                    - Parameter <code>content</code> is used to specify the HTML content of the modal.<br />
+                    - Parameter <code>name</code> is used to specify the name of the modal, as shown in the side
+                    pane.<br />
                     Parameter <code>parent</code> is used to specify the element the modal is to be appended to.<br />
+
+                    <br />
+                    <p class="font-normal text-2xl">EventObject</p>
+                    <p class="leading-0">HTML element where events will be dispatched.</p>
+                    <br />
+
+                    <p class="leading-0">
+                    <p class="font-normal text-xl"> <code>EventObject</code></p>
+                    <code>HTMLDivElement</code><br />
+                    The object where custom events will be dispatched and can be listened via
+                    <code>addEventListener</code>.
+                    </p>
+
+                    <br />
+                    <p class="font-normal text-2xl">Events</p>
+                    <p class="leading-0">An object containing events dispatched on the <code>EventObject</code>.</p>
+                    <br />
+
+                    <p class="leading-0">
+                    <p class="font-normal text-xl"> <code>Events.DomContentLoaded</code></p>
+                    <code>string</code><br />
+                    A string representing the DomContentLoaded custom event. Value is <code>DRC.DomContentLoaded</code>.
+                    </p>
+                    <p class="leading-0">
+                    <p class="font-normal text-xl"> <code>Events.DocumentLoaded</code></p>
+                    <code>string</code><br />
+                    A string representing the DocumentLoaded custom event. Value is <code>DRC.DocumentLoaded</code>.
+                    </p>
+                    <p class="leading-0">
+                    <p class="font-normal text-xl"> <code>Events.GameStarted</code></p>
+                    <code>string</code><br />
+                    A string representing the GameStarted custom event. Value is <code>DRC.GameStarted</code>.
+                    </p>
+                    <p class="leading-0">
+                    <p class="font-normal text-xl"> <code>Events.GameEnded</code></p>
+                    <code>string</code><br />
+                    A string representing the GameEnded custom event. Value is <code>DRC.GameEnded</code>.
+                    </p>
+                    <p class="leading-0">
+                    <p class="font-normal text-xl"> <code>Events.GameEvolved</code></p>
+                    <code>string</code><br />
+                    A string representing the GameEvolved custom event. Value is <code>DRC.GameEvolved</code>.
+                    </p>
+                    <p class="leading-0">
+                    <p class="font-normal text-xl"> <code>Events.SettingsOpened</code></p>
+                    <code>string</code><br />
+                    A string representing the SettingsOpened custom event. Value is <code>DRC.SettingsOpened</code>.
+                    </p>
+                    <br />
+                    <p class="leading-0">
+                    <p class="font-normal text-xl"> Events.EventsList</p>
+                    An object containing the <code>CustomEvent</code>s dispatched on <code>EventObject</code>.
+                    </p>
+                    <br />
+                    <p class="leading-0">
+                    <p class="font-normal"> <code>Events.EventsList.DomContentLoaded</code></p>
+                    <code>CustomEvent</code><br />
+                    A Custom Event that is dispatched on <code>EventObject</code>. Value is
+                    <code>DRC.DomContentLoaded</code>.<br />
+                    Dispatched on DOM content loaded.
+                    </p>
+                    <p class="leading-0">
+                    <p class="font-normal"> <code>Events.EventsList.DocumentLoaded</code></p>
+                    <code>CustomEvent</code><br />
+                    A Custom Event that is dispatched on <code>EventObject</code>. Value is
+                    <code>DRC.DocumentLoaded</code>.<br />
+                    Dispatched on document load.
+                    </p>
+                    <p class="leading-0">
+                    <p class="font-normal"> <code>Events.EventsList.GameStarted</code></p>
+                    <code>CustomEvent</code><br />
+                    A Custom Event that is dispatched on <code>EventObject</code>. Value is
+                    <code>DRC.GameStarted</code>.<br />
+                    Dispatched on game start.
+                    </p>
+                    <p class="leading-0">
+                    <p class="font-normal"> <code>Events.EventsList.GameEnded</code></p>
+                    <code>CustomEvent</code><br />
+                    A Custom Event that is dispatched on <code>EventObject</code>. Value is
+                    <code>DRC.GameEnded</code>.<br />
+                    Dispatched on game end, whether that be quitting or death.
+                    </p>
+                    <p class="leading-0">
+                    <p class="font-normal"> <code>Events.EventsList.GameEvolved</code></p>
+                    <code>CustomEvent</code><br />
+                    A Custom Event that is dispatched on <code>EventObject</code>. Value is
+                    <code>DRC.GameEvolved</code>.<br />
+                    Dispatched on evolution in-game. Currently buggy, will be fixed in a later update.
+                    </p>
+                    <p class="leading-0">
+                    <p class="font-normal"> <code>Events.EventsList.SettingsOpened</code></p>
+                    <code>CustomEvent</code><br />
+                    A Custom Event that is dispatched on <code>EventObject</code>. Value is
+                    <code>DRC.SettingsOpened</code>.<br />
+                    Dispatched on Settings modal opened.
+
                     </p>
                 </div>
             </section>
