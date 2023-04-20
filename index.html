@@ -32,6 +32,10 @@
                 <h2>A Simple v4 Desktop Client</h2>
             </div>
             <button class="download" onclick="(async () => {
+                if (!navigator.userAgent.includes('Windows')) {
+                    alert('Sorry, but there are only prebuilt binaries for Microsoft Windows. See FAQs for installing on macOS or Linux.');
+                    return;
+                }
                 var url = await fetch('/api/insturl.txt').then(res=> res.text())
                 .catch(err => {
                 alert('Error fetching installer URL. Please try again or manually download the installer from GitHub Releases.')
