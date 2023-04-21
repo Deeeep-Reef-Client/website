@@ -36,4 +36,9 @@
 
 .plugin-author {
     font-size: 0.9em;
+    display: flex;
+}
+
+.plugin-verified-icon {
+    margin-left: 10px
 }

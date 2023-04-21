@@ -78,6 +78,7 @@
                 if (plugins[i].author === "Dev") {
                     const verifiedElem = document.createElement("img");
                     verifiedElem.src = "/assets/verified.png";
+                    verifiedElem.classList.add("plugin-verified-icon");
                     verifiedElem.setAttribute("height", "20px");
                     verifiedElem.setAttribute("width", "20px");
                     authorElem.appendChild(verifiedElem);
