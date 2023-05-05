@@ -1,3 +1,5 @@
+/*Home Page*/
+
 .home-page .home-bg {
     background-image: url(/assets/bgimage.png) !important;
 }
@@ -8,18 +10,24 @@
 .dark .modal-content {
     background-color: rgba(31, 41, 55, 0.5) !important;
 }
+
+/*Text Input*/
+
 .dark body .el-input__wrapper, .dark body .el-textarea__wrapper {
     background-color: rgba(17, 24, 39, 0.5) !important;
 }
 .dark body .el-input__wrapper > .el-input__inner {
     color: white !important;
 }
-.loading-container {
-    background-image: url(bgimage.png) !important;
-}
+
+/*Shop*/
+
 .animals-container .animals .animal {
     --tw-bg-opacity: 0.3 !important
 }
+
+/*Forum*/
+
 .dark .forum-page {
     --tw-bg-opacity: 0.3 !important
 }
@@ -31,6 +39,12 @@
 }
 .dark .forum-post-page .inner {
     --tw-bg-opacity: 0.3 !important
+}
+
+/*Loading*/
+
+.loading-container {
+    background-image: url(bgimage.png) !important;
 }
 
 div.loading-bar > img.ball {
