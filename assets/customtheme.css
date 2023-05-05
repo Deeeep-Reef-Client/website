@@ -3,20 +3,24 @@
 .home-page .home-bg {
     background-image: url(/assets/bgimage.png) !important;
 }
+
 .vfm--overlay {
     background-color: rgba(0, 0, 0, 0.5) !important;
     backdrop-filter: blur(5px) !important;
 }
+
 .dark .modal-content {
     background-color: rgba(31, 41, 55, 0.5) !important;
 }
 
 /*Text Input*/
 
-.dark body .el-input__wrapper, .dark body .el-textarea__wrapper {
+.dark body .el-input__wrapper,
+.dark body .el-textarea__wrapper {
     background-color: rgba(17, 24, 39, 0.5) !important;
 }
-.dark body .el-input__wrapper > .el-input__inner {
+
+.dark body .el-input__wrapper>.el-input__inner {
     color: white !important;
 }
 
@@ -31,12 +35,15 @@
 .dark .forum-page {
     --tw-bg-opacity: 0.3 !important;
 }
+
 .dark .forum-page .inner .forum-posts .post-summary .forum-post-summary {
     --tw-border-opacity: 0.3 !important;
 }
+
 .dark .forum-page .inner .forum-posts .post-summary .forum-post-summary:hover {
     --tw-border-opacity: 0.5 !important;
 }
+
 .dark .forum-post-page .inner {
     --tw-bg-opacity: 0.3 !important;
 }
@@ -47,13 +54,23 @@
     --tw-bg-opacity: 0.3 !important;
 }
 
+/*Friends*/
+
+.dark .social-modal .main .sidebar--left {
+    --tw-bg-opacity: 0.3 !important;
+}
+
+.dark .social-modal .main .content {
+    --tw-bg-opacity: 0.3 !important;
+}
+
 /*Loading*/
 
 .loading-container {
     background-image: url(bgimage.png) !important;
 }
 
-div.loading-bar > img.ball {
+div.loading-bar>img.ball {
     display: block !important;
     box-sizing: border-box !important;
     background: url(loadingball.png) no-repeat !important;
@@ -62,6 +79,6 @@ div.loading-bar > img.ball {
     padding-left: 128px !important;
 }
 
-div.loading-bar > div {
+div.loading-bar>div {
     background-color: #ecdc9a !important;
 }
