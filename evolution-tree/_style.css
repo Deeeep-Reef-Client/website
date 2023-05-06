@@ -203,7 +203,7 @@ body {
     line-height: 5rem;
     display: flex;
     justify-content: center;
-    width: calc(27.5px + 1rem);
+    width: calc(30px + 1rem);
     border: 3px solid azure;
 }
 
@@ -223,7 +223,6 @@ body {
     border-bottom: none !important;
     border-right: none !important;
     border-left: none !important;
-    width: calc(30px + 1rem);
 }
 
 .drc-tree-line-left-right {
@@ -245,18 +244,17 @@ body {
     border-right: none !important;
     border-top: none !important;
     border-left: none !important;
-    width: calc(30px + 1rem);
 }
 
 .drc-tree-line-hcw-left {
-    width: 11px !important;
+    width: 15px !important;
     border-bottom: none !important;
     border-right: none !important;
     border-top: none !important;
 }
 
 .drc-tree-line-hcw-left-right {
-    width: 10px !important;
+    width: 15px !important;
     border-bottom: none !important;
     border-top: none !important;
 }
