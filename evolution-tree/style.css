@@ -249,7 +249,7 @@ body {
 }
 
 .drc-tree-line-hcw-left {
-    width: 11px !important;
+    width: 14px !important;
     border-bottom: none !important;
     border-right: none !important;
     border-top: none !important;
@@ -269,7 +269,7 @@ body {
 }
 
 .drc-tree-line-hcwfm-left-top {
-    width: calc(15px + 1rem) !important;
+    width: calc(12.5px + 1rem) !important;
     border-bottom: none !important;
     border-right: none !important;
 }
