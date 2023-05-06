@@ -1,0 +1,288 @@
+@font-face {
+    font-family: Quicksand;
+    src: url("/styles/fonts/Quicksand-Regular.ttf");
+}
+
+body {
+    font-family: Quicksand;
+    color: white;
+    background-image: url("https://beta.deeeep.io/img/dpbg6.png");
+    display: flex;
+    justify-content: center;
+}
+
+.drc-tree-choice {
+    --drc-bg-opacity: 0.1;
+    background-color: rgba(255, 255, 255, var(--drc-bg-opacity));
+    border-radius: 0.5rem;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+    /*width: 5rem;
+    height: 5rem;*/
+    width: 30px;
+    height: 41px;
+    line-height: 5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.drc-tree-choice:hover {
+    --drc-bg-opacity: 0.3
+}
+
+.drc-tree-choice-semiselected {
+    --drc-bg-opacity: 0.2
+}
+
+.drc-tree-choice-t10 {
+    margin-top: 0.75rem;
+}
+
+.drc-tree-image {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    width: 80%;
+    height: 80%;
+    pointer-events: none;
+}
+
+.drc-tree-image-inner {
+    object-fit: contain;
+    vertical-align: top;
+    width: 100%;
+    height: 100%;
+}
+
+.drc-tree-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: right;
+    max-height: 100%;
+    overflow: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    max-width: 100%;
+}
+
+.drc-tree-tier {
+    font-size: 2rem;
+}
+
+.drc-tree-void {
+    overflow: hidden;
+    width: 30px;
+    height: 41px;
+    line-height: 5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.drc-tree-vertical-line-wrapper {
+    overflow: hidden;
+    width: 5rem;
+    height: 0.75rem;
+    line-height: 5rem;
+    display: flex;
+    justify-content: center;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+.drc-tree-vertical-line {
+    background-color: white;
+    height: 0.75rem;
+    width: 0.4rem;
+}
+.drc-animal-info {
+    background-color: rgba(0, 0, 0, var(--tw-bg-opacity));
+    --tw-bg-opacity: 0.4;
+    border-radius: 0.5rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    pointer-events: none;
+    position: absolute;
+    line-height: 1.3em;
+    width: max-content;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.drc-animal-title {
+    text-transform: capitalize;
+}
+
+.drc-animal-stats {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: -0.25rem;
+    margin-right: -0.25rem;
+}
+
+.drc-animal-stat {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+    font-size: 0.9em;
+}
+
+.drc-animal-image-icon {
+    overflow: hidden;
+    width: 1rem;
+    margin-right: 0.25rem;
+    height: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.drc-animal-image-inner {
+    vertical-align: top;
+}
+
+.drc-animal-value {
+    font-weight: 300;
+    margin-right: 0.25rem;
+}
+
+.drc-text-green {
+    --tw-text-opacity: 1;
+    color: rgba(110, 231, 183, var(--tw-text-opacity));
+}
+
+.drc-text-red {
+    --tw-text-opacity: 1;
+    color: rgba(252, 165, 165, var(--tw-text-opacity));
+}
+
+.drc-text-cyan {
+    --tw-text-opacity: 1;
+    color: rgba(103, 232, 249, var(--tw-text-opacity));
+}
+
+.drc-animal-font-normal {
+    margin-top: 0.25rem;
+    font-weight: 400;
+}
+
+.drc-animal-habitat {
+    font-size: 0.9em;
+    display: block;
+    font-weight: 300;
+    white-space: nowrap;
+}
+
+.drc-animal-summary {
+    display: block;
+    font-weight: 300;
+    font-style: italic;
+    white-space: nowrap;
+    font-size: 0.9rem;
+}
+
+.drc-tree-line-begin {
+    overflow: hidden;
+    height: 0.75rem;
+    line-height: 5rem;
+    display: flex;
+    justify-content: center;
+    width: calc(15px + 0.5rem);
+}
+
+.drc-tree-line {
+    overflow: hidden;
+    height: 0.75rem;
+    line-height: 5rem;
+    display: flex;
+    justify-content: center;
+    width: calc(30px + 1rem);
+    border: 3px solid azure;
+}
+
+.drc-tree-line-left {
+    border-bottom: none !important;
+    border-right: none !important;
+    border-top: none !important;
+}
+
+.drc-tree-line-right {
+    border-bottom: none !important;
+    border-left: none !important;
+    border-top: none !important;
+}
+
+.drc-tree-line-top {
+    border-bottom: none !important;
+    border-right: none !important;
+    border-left: none !important;
+}
+
+.drc-tree-line-left-right {
+    border-bottom: none !important;
+    border-top: none !important;
+}
+
+.drc-tree-line-left-top {
+    border-bottom: none !important;
+    border-right: none !important;
+}
+
+.drc-tree-line-left-top-right {
+    border-bottom: none !important;
+}
+
+.drc-tree-line-void {
+    border-bottom: none !important;
+    border-right: none !important;
+    border-top: none !important;
+    border-left: none !important;
+}
+
+.drc-tree-line-hcw-left {
+    width: 15px !important;
+    border-bottom: none !important;
+    border-right: none !important;
+    border-top: none !important;
+}
+
+.drc-tree-line-hcw-left-right {
+    width: 15px !important;
+    border-bottom: none !important;
+    border-top: none !important;
+}
+
+.drc-tree-line-hcwfm-top {
+    width: calc(15px + 1rem) !important;
+    border-bottom: none !important;
+    border-right: none !important;
+    border-left: none !important;
+}
+
+.drc-tree-line-hcwfm-left-top {
+    width: calc(15px + 1rem) !important;
+    border-bottom: none !important;
+    border-right: none !important;
+}
+
+.drc-tree-line-hcwfm-top-right {
+    width: calc(15px + 1rem) !important;
+    border-bottom: none !important;
+    border-left: none !important;
+}
+
+.drc-tree-tier {
+    text-align: center;
+    width: 30px;
+    height: 44px;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    margin-top: 1.25rem;
+}
