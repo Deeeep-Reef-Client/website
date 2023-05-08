@@ -67,7 +67,7 @@
 /*Loading*/
 
 .loading-container {
-    background-image: url(bgimage.png) !important;
+    background-image: url(loadingbg.png) !important;
 }
 
 div.loading-bar>img.ball {
