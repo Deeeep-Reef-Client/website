@@ -6,6 +6,10 @@ div.pd-overlay > div.pd-ranking-dialog > div > div > div > div > div.side.side--
     --tw-gradient-from: rgba(6, 33, 95, 0.4) !important;
 }
 
+div.pd-overlay > div > div.sidebar.left > div > div.inner.inner--left > div.player-slot {
+    --tw-gradient-from: rgba(6, 33, 95, 0.4) !important;
+}
+
 div.choices > div.el-row.content > div.suitable > div.inner{
     background-color: rgba(16, 113, 185, var(--tw-bg-opacity)) !important;
 }
