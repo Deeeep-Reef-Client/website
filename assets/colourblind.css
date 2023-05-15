@@ -23,3 +23,7 @@ div.el-row.main-actions>div.el-col.el-col-8.is-guttered>button:hover {
     background-color: rgba(13, 83, 149, var(--tw-bg-opacity)) !important;
     border-color: rgba(11, 59, 104, var(--tw-bg-opacity)) !important;
 }
+
+div.el-row.animal-data > div.el-col.el-col-24.auto-col.relative > div.meter.vertical.rounded-none.animal > div.inner {
+    background-color: rgba(0, 95, 255, 0.3) !important;
+}
