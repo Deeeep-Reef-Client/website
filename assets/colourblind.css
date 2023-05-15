@@ -27,3 +27,7 @@ div.el-row.main-actions>div.el-col.el-col-8.is-guttered>button:hover {
 div.el-row.animal-data > div.el-col.el-col-24.auto-col.relative > div.meter.vertical.rounded-none.animal > div.inner {
     background-color: rgba(0, 95, 255, 0.3) !important;
 }
+
+div.pd-overlay > div > div.side > div.pd-pearl.pearl > div.meters > div.meter-container > div.meter > div.inner {
+    background-color: rgba(0, 169, 255, 0.6) !important;
+}
