@@ -25,7 +25,7 @@
     </script>
 
     <!-- Replace the title name -->
-    <title>DRC API | Deeeep.io Reef Client Docs</title>
+    <title>Hotkeys | Deeeep.io Reef Client Docs</title>
 </head>
 
 <body style="font-family: 'Quicksand', sans-serif" class="dark:bg-slate-900 bg-white dark:text-white">
@@ -109,7 +109,8 @@
                         </li>
                         <li class="text-[#111] dark:text-slate-300 pl-[20px] font-[400] border-l-[2px]">
                             <a href="/docs/features/chrome-extensions">Chrome Extensions</a>
-                        </li>                        <li class="text-[#111] dark:text-slate-300 pl-[20px] font-[400] border-l-[2px]">
+                        </li>
+                        <li class="text-[#111] dark:text-slate-300 pl-[20px] font-[400] border-l-[2px]">
                             <a href="/docs/features/hotkeys">Hotkeys</a>
                         </li>
                     </ul>
@@ -121,7 +122,7 @@
                             <a href="/docs/developer/plugins-api">Plugins API</a>
                         </li>
                         <li class="text-[#111] dark:text-slate-300 pl-[20px] font-[400] border-l-[2px]">
-                            <a href="#">DRC API</a>
+                            <a href="/docs/developer/drc-api">DRC API</a>
                         </li>
                         <li class="text-[#111] dark:text-slate-300 pl-[20px] font-[400] border-l-[2px]">
                             <a href="/docs/developer/building">Building</a>
@@ -144,180 +145,46 @@
         <!-- Side Menu ends here -->
 
         <div class="pl-5 md:pl-[250px] lg:pl-[250px]">
-
             <!-- Link1 start -->
-            <section id="header">
+            <section id="link1">
                 <div class="h-full mt-10">
-                    <p class="font-normal text-3xl">DRC API</p>
+                    <p class="font-normal text-3xl">Hotkeys</p>
                     <p class="leading-0">
-                        The DRC API is a set of utilities commonly used in plugins and within the client itself.
+                        About the hotkeys and keyboard shortcuts of the Deeeep.io Reef Client.
                     </p>
                 </div>
             </section>
-            <section id="api">
+            <section id="hotkeys">
                 <div class="h-full mt-10">
-                    <p class="font-normal text-3xl">The API</p>
+                    <p class="font-normal text-2xl">F12: DevTools</p>
                     <p class="leading-0">
-                        The DRC API can be accessed in Preload as <code>DRC.*</code> namespace, and exposed in browser
-                        context as <code>DRC_API.DRC.*</code> namespace.
+                        Opens DevTools pane. Only for development use.
                     </p>
-                    <br />
-
-                    <p class="font-normal text-2xl">Client</p>
-                    <p class="leading-0">Some information on the client.</p>
-                    <br />
+                    <br/>
+                    <p class="font-normal text-2xl">KeyC: Cancel Charge</p>
                     <p class="leading-0">
-                    <p class="font-normal text-xl"> <code>Client.name</code></p>
-                    <code>string</code><br />
-                    Name of the Client. (Deeeep.io Reef Client)
+                        Cancels charge boost if charging like right-click. Page: <a href="/docs/features/touchpad"
+                        class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Touchpad</a>
                     </p>
+                    <br/>
+                    <p class="font-normal text-2xl">KeyT: Evolution Tree</p>
                     <p class="leading-0">
-                    <p class="font-normal text-xl"> <code>Client.version</code></p>
-                    <code>string</code><br />
-                    Semantic version of the client. (&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;)
+                        Opens the Interactive Evolution Tree. This hotkey only works in-game.
                     </p>
+                    <br/>
+                    <p class="font-normal text-2xl">KeyV: Screenshot</p>
                     <p class="leading-0">
-                    <p class="font-normal text-xl"> <code>Client.versionTag</code></p>
-                    <code>string</code><br />
-                    Release tag of the client. (&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;&lt;-alpha/-beta/(none)&gt;)
+                        Takes a screenshot of the game. This hotkey only works in-game.
                     </p>
-                    <br />
-
-                    <p class="font-normal text-2xl">Preload</p>
-                    <p class="leading-0">Utilities on the Preload.</p>
-                    <br />
+                    <br/>
+                    <p class="font-normal text-2xl">KeyX: Ghost</p>
                     <p class="leading-0">
-                    <p class="font-normal text-xl"> <code>Preload.evalInBrowserContext</code></p>
-                    <code>function (str: string): void</code><br />
-                    Takes a string and evaluates in the browser context.<br />
-                    Parameter <code>str</code> is used to specify the JavaScript source to be evaluated.<br />
-                    </p>
-                    <br />
-
-                    <p class="font-normal text-2xl">Modal</p>
-                    <p class="leading-0">Utilities on modals.</p>
-                    <br />
-
-                    <p class="leading-0">
-                    <p class="font-normal text-xl"> <code>Modal.buildModal</code></p>
-                    <code>function (id: string, title: string, content: string): HTMLDivElement</code><br />
-                    Takes arguments about the modal and returns the modal element.<br />
-                    Parameter <code>id</code> is used to specify the HTML ID of the modal.<br />
-                    Parameter <code>title</code> is used to specify the title of the modal.<br />
-                    Parameter <code>content</code> is used to specify the HTML content.<br />
-                    </p>
-                    <br />
-
-                    <p class="leading-0">
-                    <p class="font-normal text-xl"> <code>Modal.buildTab</code></p>
-                    <code>function (id: string, content: { content: string, name: string }[], parent: HTMLElement): HTMLDivElement</code><br />
-                    Takes arguments about the tabs and builds a multi-tabbed modal. Tab will automatically be appended
-                    to <code>parent</code>, and the element returned.<br />
-                    Parameter <code>id</code> is used to specify the HTML ID of the modal.<br />
-                    Parameter <code>content</code> is used to specify the content of the modal.<br />
-                    - Parameter <code>content</code> is used to specify the HTML content of the modal.<br />
-                    - Parameter <code>name</code> is used to specify the name of the modal, as shown in the side
-                    pane.<br />
-                    Parameter <code>parent</code> is used to specify the element the modal is to be appended to.<br />
-
-                    <br />
-                    <p class="font-normal text-2xl">EventObject</p>
-                    <p class="leading-0">HTML element where events will be dispatched.</p>
-                    <br />
-
-                    <p class="leading-0">
-                    <p class="font-normal text-xl"> <code>EventObject</code></p>
-                    <code>HTMLDivElement</code><br />
-                    The object where custom events will be dispatched and can be listened via
-                    <code>addEventListener</code>.
-                    </p>
-
-                    <br />
-                    <p class="font-normal text-2xl">Events</p>
-                    <p class="leading-0">An object containing events dispatched on the <code>EventObject</code>.</p>
-                    <br />
-
-                    <p class="leading-0">
-                    <p class="font-normal text-xl"> <code>Events.DomContentLoaded</code></p>
-                    <code>string</code><br />
-                    A string representing the DomContentLoaded custom event. Value is <code>DRC.DomContentLoaded</code>.
-                    </p>
-                    <p class="leading-0">
-                    <p class="font-normal text-xl"> <code>Events.DocumentLoaded</code></p>
-                    <code>string</code><br />
-                    A string representing the DocumentLoaded custom event. Value is <code>DRC.DocumentLoaded</code>.
-                    </p>
-                    <p class="leading-0">
-                    <p class="font-normal text-xl"> <code>Events.GameStarted</code></p>
-                    <code>string</code><br />
-                    A string representing the GameStarted custom event. Value is <code>DRC.GameStarted</code>.
-                    </p>
-                    <p class="leading-0">
-                    <p class="font-normal text-xl"> <code>Events.GameEnded</code></p>
-                    <code>string</code><br />
-                    A string representing the GameEnded custom event. Value is <code>DRC.GameEnded</code>.
-                    </p>
-                    <p class="leading-0">
-                    <p class="font-normal text-xl"> <code>Events.GameEvolved</code></p>
-                    <code>string</code><br />
-                    A string representing the GameEvolved custom event. Value is <code>DRC.GameEvolved</code>.
-                    </p>
-                    <p class="leading-0">
-                    <p class="font-normal text-xl"> <code>Events.SettingsOpened</code></p>
-                    <code>string</code><br />
-                    A string representing the SettingsOpened custom event. Value is <code>DRC.SettingsOpened</code>.
-                    </p>
-                    <br />
-                    <p class="leading-0">
-                    <p class="font-normal text-xl"> Events.EventsList</p>
-                    An object containing the <code>CustomEvent</code>s dispatched on <code>EventObject</code>.
-                    </p>
-                    <br />
-                    <p class="leading-0">
-                    <p class="font-normal"> <code>Events.EventsList.DomContentLoaded</code></p>
-                    <code>CustomEvent</code><br />
-                    A Custom Event that is dispatched on <code>EventObject</code>. Value is
-                    <code>DRC.DomContentLoaded</code>.<br />
-                    Dispatched on DOM content loaded.
-                    </p>
-                    <p class="leading-0">
-                    <p class="font-normal"> <code>Events.EventsList.DocumentLoaded</code></p>
-                    <code>CustomEvent</code><br />
-                    A Custom Event that is dispatched on <code>EventObject</code>. Value is
-                    <code>DRC.DocumentLoaded</code>.<br />
-                    Dispatched on document load.
-                    </p>
-                    <p class="leading-0">
-                    <p class="font-normal"> <code>Events.EventsList.GameStarted</code></p>
-                    <code>CustomEvent</code><br />
-                    A Custom Event that is dispatched on <code>EventObject</code>. Value is
-                    <code>DRC.GameStarted</code>.<br />
-                    Dispatched on game start.
-                    </p>
-                    <p class="leading-0">
-                    <p class="font-normal"> <code>Events.EventsList.GameEnded</code></p>
-                    <code>CustomEvent</code><br />
-                    A Custom Event that is dispatched on <code>EventObject</code>. Value is
-                    <code>DRC.GameEnded</code>.<br />
-                    Dispatched on game end, whether that be quitting or death.
-                    </p>
-                    <p class="leading-0">
-                    <p class="font-normal"> <code>Events.EventsList.GameEvolved</code></p>
-                    <code>CustomEvent</code><br />
-                    A Custom Event that is dispatched on <code>EventObject</code>. Value is
-                    <code>DRC.GameEvolved</code>.<br />
-                    Dispatched on evolution in-game. Currently buggy, will be fixed in a later update.
-                    </p>
-                    <p class="leading-0">
-                    <p class="font-normal"> <code>Events.EventsList.SettingsOpened</code></p>
-                    <code>CustomEvent</code><br />
-                    A Custom Event that is dispatched on <code>EventObject</code>. Value is
-                    <code>DRC.SettingsOpened</code>.<br />
-                    Dispatched on Settings modal opened.
-
+                        If spectating, kill the ghost like Key Q. This hotkey only works if the player is a Ghost.
                     </p>
                 </div>
             </section>
+            <!-- Link1 end -->
+            <!-- Link6 starts -->
         </div>
     </div>
     <!-- Footer starts here -->

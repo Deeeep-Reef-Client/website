@@ -33,12 +33,20 @@
                 <h2>Deeeep.io Reef Client</h2>
             </div>
             <button class="download" onclick="(async () => {
-                    var url = await fetch('/api/insturl.txt').then(res=> res.text())
+                    let instUrlPath = '';
+                    if (navigator.userAgent.includes('Windows')) {
+                        instUrlPath = '/api/insturl-win32.txt';
+                    } else {
+                        alert('Sorry, but there are only prebuilt binaries for Microsoft Windows. See FAQs for installing on macOS or Linux.');
+                        return;
+                    }
+                    var url = await fetch(instUrlPath).then(res=> res.text())
                     .catch(err => {
                     alert('Error fetching installer URL. Please try again or manually download the installer from GitHub Releases.')
                     });
                     if (url) window.location.href = url;
-                    })();">
+                    })();
+            ">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                     class="bi bi-cloud-download" viewBox="0 0 16 16">
                     <path
