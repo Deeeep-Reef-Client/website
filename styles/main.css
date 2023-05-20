@@ -6,7 +6,7 @@
 body {
     font-family: quicksand;
     margin: 0px;
-    background-color: #1c395f;
+    background-color: #0f1f34;
     user-select: none;
 }
 
@@ -109,12 +109,12 @@ a:visited {
 
 .section {
     border-radius: 25px;
-    background-color: #234775;
+    background-color: #132740;
     padding: 10px;
     margin: 20px;
 }
 .section:hover {
-    background-color: #274e81;
+    background-color: #193252;
 }
 
 .screenshot {
