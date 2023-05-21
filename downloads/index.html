@@ -32,7 +32,7 @@
                 <h1 class="name">Downloads</h1>
                 <h2>Deeeep.io Reef Client</h2>
             </div>
-            <button class="download" onclick="(async () => {
+            <button id="downloadButton" class="download" onclick="(async () => {
                     let instUrlPath = '';
                     if (navigator.userAgent.includes('Windows')) {
                         instUrlPath = '/api/insturl-win32.txt';
@@ -70,10 +70,8 @@
             <div class="section">
                 <h1>Download from installer</h1>
                 <h2>Latest version</h2>
-                <p>The latest version can be found <a
-                        href="https://github.com/Deeeep-Reef-Client/deeeep-reef-client/releases/download/v0.8.0-beta/Deeeep.io-Reef-Client-Setup-0.8.0.exe">here</a>
-                    ,
-                    or alternatively scroll up and click the blue "Latest Release" button
+                <p>The latest version can be found on the blue <a
+                        href="#downloadButton">"Downloads" button"</a> on the top of the page.
                 </p>
                 <h2>Older versions</h2>
                 <p>The installers for older versions can be found in our <a
