@@ -23,7 +23,7 @@
     border-radius: 25px;
     margin: 20px;
     color: white;
-    background-color: #234775;
+    background-color: #132740;
 }
 
 .plugin-wrapper>* {
@@ -31,7 +31,7 @@
 }
 
 .plugin-wrapper:hover {
-    background-color: #274e81;
+    background-color: #193252;
 }
 
 .plugin-author {
