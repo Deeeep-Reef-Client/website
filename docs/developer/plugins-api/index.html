@@ -109,7 +109,8 @@
                         </li>
                         <li class="text-[#111] dark:text-slate-300 pl-[20px] font-[400] border-l-[2px]">
                             <a href="/docs/features/chrome-extensions">Chrome Extensions</a>
-                        </li>                        <li class="text-[#111] dark:text-slate-300 pl-[20px] font-[400] border-l-[2px]">
+                        </li>
+                        <li class="text-[#111] dark:text-slate-300 pl-[20px] font-[400] border-l-[2px]">
                             <a href="/docs/features/hotkeys">Hotkeys</a>
                         </li>
                     </ul>
@@ -174,15 +175,30 @@
                             "type": "plugin **OR** theme",<br/>
                             "description": "Your plugin description",<br/>
                             "author": "Your name"<br/>
+                            "version": "Any string"<br/>
                         }
                     </code>
                     <p class="leading-0">
-                        Furthermore, a directory must be created in the /plugins folder corresponding to the ID of your
-                        plugin.<br />
-                        A file must be created in the directory with a name of plugin.json which will contail your
-                        plugin/theme. The format of plugin.json will be detailed in the following sections.<br />
-                        Assets required for the plugin or theme will be hosted on GitHub Pages, at
-                        https://deeeep-reef-client.github.io/plugins-api/[PLUGIN ID].
+                    <p class="font-normal text-xl">Explanation:</p>
+                    <ul class="leading-0 list-disc">
+                        <li>name: Name of your Plugin or Theme</li>
+                        <li>id: Unique identifier of your Plugin or Theme</li>
+                        <li>type: Either "plugin" or "theme". Purpose is self-explanatory.</li>
+                        <li>description: A short description of the Plugin or Theme. Will show up in the search
+                            function.
+                        </li>
+                        <li>author: Your name.
+                        </li>
+                        <li>version [Optional] [Plugin Only]: A string containing the version of your Plugin. Optional,
+                            but required for the Plugin Auto Updater to work..
+                        </li>
+                    </ul>
+                    Furthermore, a directory must be created in the /plugins folder corresponding to the ID of your
+                    plugin.<br />
+                    A file must be created in the directory with a name of plugin.json which will contail your
+                    plugin/theme. The format of plugin.json will be detailed in the following sections.<br />
+                    Assets required for the plugin or theme will be hosted on GitHub Pages, at
+                    https://deeeep-reef-client.github.io/plugins-api/[PLUGIN ID].
                     </p>
                 </div>
             </section>
@@ -192,11 +208,11 @@
                     <p class="leading-0">
                         This is the required format of plugin.json if you are creating a Script Plugin (plugin that
                         executes code).<br />
-                        Explanation:<br />
-                        Under key "src", insert an array of scripts.<br />
-                        Scripts should consist of a "type" key, specifying the type of the script and the "src" key,
-                        specifying the JS source of the script.<br />
-                        The script types are:<br />
+                    <p class="font-normal text-xl">Explanation:</p>
+                    Under key "src", insert an array of scripts.<br />
+                    Scripts should consist of a "type" key, specifying the type of the script and the "src" key,
+                    specifying the JS source of the script.<br />
+                    The script types are:<br />
                     <ul class="leading-0 list-disc">
                         <li>startup: Executes the source on client startup in index.js</li>
                         <li>preload: Executes code on preload.js startup</li>
@@ -219,6 +235,11 @@
                             ]<br/>
                         }
                     </code>
+                    <br />
+                    <p class="font-normal text-xl">Auto Updater</p>
+                    There is an optional auto updater for plugins. This will compare the <code>version</code> key of the
+                    Registry with the version of the installation, and install the plugin if the versions do not match.
+                    The "update" Script type can be used to run reinitialisation procedures.
                 </div>
             </section>
             <section id="theme-plugins">
