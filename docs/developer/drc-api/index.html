@@ -109,7 +109,8 @@
                         </li>
                         <li class="text-[#111] dark:text-slate-300 pl-[20px] font-[400] border-l-[2px]">
                             <a href="/docs/features/chrome-extensions">Chrome Extensions</a>
-                        </li>                        <li class="text-[#111] dark:text-slate-300 pl-[20px] font-[400] border-l-[2px]">
+                        </li>
+                        <li class="text-[#111] dark:text-slate-300 pl-[20px] font-[400] border-l-[2px]">
                             <a href="/docs/features/hotkeys">Hotkeys</a>
                         </li>
                     </ul>
@@ -158,7 +159,8 @@
                 <div class="h-full mt-10">
                     <p class="font-normal text-3xl">The API</p>
                     <p class="leading-0">
-                        The DRC API can be accessed in Preload as <code>DRC.*</code> namespace, and exposed in browser
+                        The DRC API can be accessed in Preload as <code>DRC.*</code> namespace, in Main as
+                        <code>DRC.*</code> namespace, and the Preload version exposed in browser
                         context as <code>DRC_API.DRC.*</code> namespace.
                     </p>
                     <br />
@@ -183,7 +185,7 @@
                     </p>
                     <br />
 
-                    <p class="font-normal text-2xl">Preload</p>
+                    <p class="font-normal text-2xl">Preload [Preload Only]</p>
                     <p class="leading-0">Utilities on the Preload.</p>
                     <br />
                     <p class="leading-0">
@@ -194,7 +196,7 @@
                     </p>
                     <br />
 
-                    <p class="font-normal text-2xl">Modal</p>
+                    <p class="font-normal text-2xl">Modal [Preload Only]</p>
                     <p class="leading-0">Utilities on modals.</p>
                     <br />
 
@@ -205,7 +207,8 @@
                     Parameter <code>id</code> is used to specify the HTML ID of the modal.<br />
                     Parameter <code>title</code> is used to specify the title of the modal.<br />
                     Parameter <code>content</code> is used to specify the HTML content.<br />
-                    Parameter <code>noOverlay</code> is used to toggle modal overlay. Set to <code>true</code> to hide overlay.<br />
+                    Parameter <code>noOverlay</code> is used to toggle modal overlay. Set to <code>true</code> to hide
+                    overlay.<br />
                     </p>
                     <br />
 
@@ -222,7 +225,7 @@
                     Parameter <code>parent</code> is used to specify the element the modal is to be appended to.<br />
 
                     <br />
-                    <p class="font-normal text-2xl">EventObject</p>
+                    <p class="font-normal text-2xl">EventObject [Preload Only]</p>
                     <p class="leading-0">HTML element where events will be dispatched.</p>
                     <br />
 
@@ -234,7 +237,7 @@
                     </p>
 
                     <br />
-                    <p class="font-normal text-2xl">Events</p>
+                    <p class="font-normal text-2xl">Events [Preload Only]</p>
                     <p class="leading-0">An object containing events dispatched on the <code>EventObject</code>.</p>
                     <br />
 
@@ -315,7 +318,43 @@
                     A Custom Event that is dispatched on <code>EventObject</code>. Value is
                     <code>DRC.SettingsOpened</code>.<br />
                     Dispatched on Settings modal opened.
-
+                    <br />
+                    <br />
+                    <p class="font-normal text-2xl">Main [Main Only]</p>
+                    <p class="leading-0">Utilities on the Main.</p>
+                    <br />
+                    <p class="leading-0">
+                    <p class="font-normal text-xl"> <code>Main.defaultSession</code></p>
+                    <code>Proxy&lt;session.defaultSession&gt;</code><br />
+                    This is the output of the <a href="https://www.npmjs.com/package/electron-better-web-request"
+                        class="font-medium text-blue-600 dark:text-blue-500 hover:underline">electron-better-web-request</a>
+                    Node module.<br />
+                    A proxy of the Electron <a href="https://www.electronjs.org/docs/latest/api/session"
+                        class="font-medium text-blue-600 dark:text-blue-500 hover:underline">session.defaultSession</a>
+                    object.<br />
+                    Patches the <code>webRequest</code> object to allow multiple <a
+                        href="https://www.electronjs.org/docs/latest/api/web-request"
+                        class="font-medium text-blue-600 dark:text-blue-500 hover:underline">WebRequest</a>
+                    listeners.<br />
+                    </p>
+                    <br />
+                    <p class="font-normal text-2xl">WebRequestHandlers [Main Only]</p>
+                    <p class="leading-0">Utility template WebRequest handlers.</p>
+                    <br />
+                    <p class="leading-0">
+                    <p class="font-normal text-xl"> <code>WebRequestHandlers.genericAssetswapperHandler</code></p>
+                    <code>function (redirectTemplate: string, regex: RegExp, name: string, filenameKeys?: string): function(details: Object, callback: Function</void>)</code><br />
+                    Returns a function that can be directly used as a WebRequest handler.<br />
+                    The returned function matches <code>details.url</code> with the <code>regex</code> regular
+                    expression, which should contain a named capture group as specified by <code>filenameKeys</code> to
+                    extract the file name.
+                    The default value of <code>filenameKeys</code> is <code>"filename"</code>. Then, appends the file
+                    name to <code>redirectTemplate</code> and performs a HTTP GET request to the specified URL. If
+                    received a response with the status 200, call <code>callback</code> with a <code>redirectURL</code>
+                    of the new redirect URL. Else, if not successful, redirects back to the original URL. <br />
+                    A piece of code not derived, but inspired by the Doctorpus Assets Chrome Extension.
+                    </p>
+                    <br />
                     </p>
                 </div>
             </section>
