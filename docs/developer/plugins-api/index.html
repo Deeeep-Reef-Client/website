@@ -219,6 +219,10 @@
                         <li>game: Executes code on game start in browser context (has access to game.* API but not
                             preload)</li>
                         <li>domloaded: Executes code on DOM loaaded in preload.js</li>
+                        <li>appstart: Executes code on Electron App start in main.js</li>
+                        <li>install: Executes code on plugin install in preload.js</li>
+                        <li>uninstall: Executes code on plugin uninstall in preload.js</li>
+                        <li>update: Executes code on plugin update in preload.js</li>
                     </ul>
                     </p>
                     <code>
@@ -229,13 +233,18 @@
                             "author": "Your name",<br/>
                             "src": [<br/>
                                 {<br/>
-                                    "type": "startup **OR** preload **OR** game **OR** domloaded"<br/>
+                                    "type": "Script type (see above)"<br/>
                                     "src": "JavaScript code to be executed"<br/>
                                 }<br/>
                             ]<br/>
                         }
                     </code>
                     <br />
+                    <p class="font-normal text-xl">Plugin User Data</p>
+                    Plugins are encouraged to store configuration and data in
+                    <code>settings.pluginUserData[&lt;name of plugin&gt;]</code>. Such a key will automatically be
+                    created upon plugin installation and deleted upon plugin uninstallation as an empty object. Any data
+                    structuring can be done with an Install script.
                     <p class="font-normal text-xl">Auto Updater</p>
                     There is an optional auto updater for plugins. This will compare the <code>version</code> key of the
                     Registry with the version of the installation, and install the plugin if the versions do not match.
