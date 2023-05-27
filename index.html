@@ -34,9 +34,13 @@
             <button class="download" onclick="(async () => {
                 let instUrlPath = '';
                 if (navigator.userAgent.includes('Windows')) {
-                    instUrlPath = '/api/insturl-win32.txt';
+                    instUrlPath = '/api/insturl-win.txt';
+                } else if (navigator.userAgent.includes('Mac')) {
+                    instUrlPath = '/api/insturl-mac.txt';
+                } else if (navigator.userAgent.includes('Linux')) {
+                    instUrlPath = '/api/insturl-linux.txt';
                 } else {
-                    alert('Sorry, but there are only prebuilt binaries for Microsoft Windows. See FAQs for installing on macOS or Linux.');
+                    alert('Sorry, but there are only prebuilt binaries for Microsoft Windows, macOS and GNU/Linux. See FAQs for installing on macOS or Linux.');
                     return;
                 }
                 var url = await fetch(instUrlPath).then(res=> res.text())
@@ -107,12 +111,6 @@
                 <h2>How do I install it?</h2>
                 <p>Click the blue "Download" button at the top of this page, or go to the <a href="/downloads">Downloads
                         page</a>.</p>
-                <div class="spacer"></div>
-                <h2>Can I install it on macOS or Linux?</h2>
-                <p>Yes, although we are unfortunately unable to provide prebuilt binaries, therefore you will have to
-                    build it yourself with <a href="https://git-scm.com">Git</a> and <a href="nodejs.org">Node.JS</a>.
-                    As we will list all the commands needed, you will not need programming knowledge to do so. See the
-                    documentation's <a href="/docs/developer/building">Building</a> page for more details.</p>
                 <div class="spacer"></div>
                 <h2>Is this safe to open?</h2>
                 <p>Yes, this client is absolutely not a virus and is safe to open. Although Windows or your antivirus

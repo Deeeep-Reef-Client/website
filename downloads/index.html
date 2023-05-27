@@ -35,9 +35,13 @@
             <button id="downloadButton" class="download" onclick="(async () => {
                     let instUrlPath = '';
                     if (navigator.userAgent.includes('Windows')) {
-                        instUrlPath = '/api/insturl-win32.txt';
+                        instUrlPath = '/api/insturl-win.txt';
+                    } else if (navigator.userAgent.includes('Mac')) {
+                        instUrlPath = '/api/insturl-mac.txt';
+                    } else if (navigator.userAgent.includes('Linux')) {
+                        instUrlPath = '/api/insturl-linux.txt';
                     } else {
-                        alert('Sorry, but there are only prebuilt binaries for Microsoft Windows. See FAQs for installing on macOS or Linux.');
+                        alert('Sorry, but there are only prebuilt binaries for Microsoft Windows, macOS and GNU/Linux. See FAQs for installing on macOS or Linux.');
                         return;
                     }
                     var url = await fetch(instUrlPath).then(res=> res.text())
