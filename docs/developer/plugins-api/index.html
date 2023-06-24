@@ -176,6 +176,7 @@
                             "description": "Your plugin description",<br/>
                             "author": "Your name"<br/>
                             "version": "Any string"<br/>
+                            "licene": "Any string OR template"<br/>
                         }
                     </code>
                     <p class="leading-0">
@@ -192,7 +193,24 @@
                         <li>version [Optional] [Plugin Only]: A string containing the version of your Plugin. Optional,
                             but required for the Plugin Auto Updater to work..
                         </li>
+                        <li>license [Optional] [Plugin Only]: A string containing the license for the Plugin. If not
+                            specified, the Plugin will be implicitly licensed under the Unlicense. Include a proprietary license if you wish to do so. By contributing a Plugin, you agree that the Deeeep.io Reef Client Project's distributing of your Plugin will in no way violate your License, and if not, grant express permission for the Project to do so.
+                            <br/>
+                            Can optionally specify a Template:
+                            <ul class="leading-0 list-disc">
+                                <li>&lt;TEMPLATE_GPL-3.0&gt;: The GNU General Public License v3.0</li>
+                                <li>&lt;TEMPLATE_LGPL-3.0&gt;: The GNU Lesser General Public License v3.0</li>
+                                <li>&lt;TEMPLATE_MIT&gt;: The MIT License. Name and year automatically filled.</li>
+                                <li>&lt;TEMPLATE_Apache-2.0&gt;: The Apache License v2.0./li>
+                                <li>&lt;TEMPLATE_BSD-3-Clause&gt;: The 3-Clause BSD License. Name and year automatically filled.</li>
+                                <li>&lt;TEMPLATE_BSD-2-Clause&gt;: The 2-Clause BSD License. Name and year automatically filled.</li>
+                                <li>&lt;TEMPLATE_ISC&gt;: The ISC License. Name and year automatically filled.</li>
+                                <li>&lt;TEMPLATE_Unlicense&gt;: The Unlicense. This is the default.</li>
+                            </ul>
+                            Optional.
+                        </li>
                     </ul>
+                    <br/>
                     Furthermore, a directory must be created in the /plugins folder corresponding to the ID of your
                     plugin.<br />
                     A file must be created in the directory with a name of plugin.json which will contail your
