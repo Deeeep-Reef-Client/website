@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Change the description wrt project -->
-    <meta name="description" content="Deeeep.io Reef Client's features" />
+    <meta name="description" content="A guide on how to make a custom modal" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,7 +25,7 @@
     </script>
 
     <!-- Replace the title name -->
-    <title>Guides | Deeeep.io Reef Client Docs</title>
+    <title>Making a Custom Modal | Deeeep.io Reef Client Docs</title>
 </head>
 
 <body style="font-family: 'Quicksand', sans-serif" class="dark:bg-slate-900 bg-white dark:text-white">
@@ -109,8 +109,6 @@
                         </li>
                         <li class="text-[#111] dark:text-slate-300 pl-[20px] font-[400] border-l-[2px]">
                             <a href="/docs/features/chrome-extensions">Chrome Extensions</a>
-                        </li>                        <li class="text-[#111] dark:text-slate-300 pl-[20px] font-[400] border-l-[2px]">
-                            <a href="/docs/features/hotkeys">Hotkeys</a>
                         </li>
                     </ul>
                 </li>
@@ -128,7 +126,7 @@
                         </li>
                     </ul>
                 </li>
-                <li class="font-medium"><a href="#">Guides</a></li>
+                <li class="font-medium"><a href="/docs/guides">Guides</a></li>
                 <li class="font-medium">
                     <a href="/docs/other">Other</a>
                     <ul class="nav">
@@ -148,24 +146,78 @@
             <!-- Link1 start -->
             <section id="header">
                 <div class="h-full mt-10">
-                    <p class="font-normal text-3xl">Guides</p>
+                    <p class="font-normal text-3xl">Making a Custom Modal</p>
                     <p class="leading-0">
-                        A place to find miscellanous guides on the client.
+                        A guide on how to make a custom modal in a Plugin.
                     </p>
                 </div>
             </section>
-            <section id="guides">
+            <section id="objective">
                 <div class="h-full mt-10">
-                    <p class="font-normal text-2xl">List of Guides</p>
+                    <p class="font-normal text-2xl">Objective</p>
                     <p class="leading-0">
-                    <ul class="leading-0 list-disc">
-                        <li><a href="/docs/guides/build-your-own-plugin"
-                                class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Build your own
-                                Plugin</a></li>
-                        <li><a href="/docs/guides/making-a-custom-modal"
-                                class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Making a Custom
-                                Modal</a></li>
-                    </ul>
+                        Make a tabbed modal that shows a random picture on one tab and a notes pane on the other tab on a Plugin.
+                    </p>
+                </div>
+            </section>
+            <section id="prerequisites">
+                <div class="h-full mt-10">
+                    <p class="font-normal text-2xl">Prerequisites</p>
+                    <p class="leading-0">
+                        A basic knowledge of JavaScript is required. If you don't know it, <a
+                            href="https://javascript.info"
+                            class="font-medium text-blue-600 dark:text-blue-500 hover:underline">JavaScript.info</a> is
+                        a good place to start.<br />
+                        You will also need a working plugin which can be made in this <a
+                            href="/docs/guides/build-your-own-plugin"
+                            class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Guide</a>.
+                    </p>
+                </div>
+            </section>
+            <section id="setting-up">
+                <div class="h-full mt-10">
+                    <p class="font-normal text-2xl">Setting Up</p>
+                    <p class="leading-0">
+                        You can use an existing Script or create a new Script. Either way, the Script's type must be "domloaded".
+                    </p>
+                </div>
+            </section>
+            <section id="writing-code">
+                <div class="h-full mt-10">
+                    <p class="font-normal text-2xl">Writing the Code</p>
+                    <p class="font-normal text-xl">Building the Modal</p>
+                    <p class="leading-0">
+                        Writing a modal from scratch is complicated and boilerplatey. The <a href="/docs/developer/drc-api" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">DRC API</a> simplifies this a lot.
+                        Insert this code to the end of your Script.
+                        <code>
+                            const myModal = DRC.Modal.buildModal("", "My Modal", "");
+                        </code>
+                        <br/>
+                        This creates a new empty modal with the title of "My Modal".
+                    </p>
+                    <p class="font-normal text-xl">Building the Tabs</p>
+                    <p class="leading-0">
+                        Then, we need to make the tabs.
+                        <code>
+                            function (id: string, content: { content: string, name: string }[], parent: HTMLElement)
+                            DRC.Modal.buildTab("", [
+                                {
+                                    content: "&lt;img src=\"&lt;&gt\"&gt;",
+                                    name: "Image"
+                                }
+                            ], myModal);
+                            const myModal = DRC.Modal.buildModal("aUniqueId", "My Modal", "");
+                        </code>
+                        <br/>
+                        This creates a new empty modal with the ID of "aUniqueId" and title of "My Modal".
+                    </p>
+                </div>
+            </section>
+            <section id="completing">
+                <div class="h-full mt-10">
+                    <p class="font-normal text-2xl">Completing</p>
+                    <p class="leading-0">
+                        You created your own Plugin! Restart Deeeep.io Reef Client to see the plugin in action.
                     </p>
                 </div>
             </section>
