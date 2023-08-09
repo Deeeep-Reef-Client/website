@@ -48,14 +48,21 @@
 
     <script type="text/javascript">
         (async () => {
-            const allPlugins = await fetch("https://deeeep-reef-client.github.io/plugins-api/registry.json")
-                .then(response => response.json());
+            const pluginsContainer = document.getElementById("pluginsContainer");
+            const themesContainer = document.getElementById("themesContainer");
+
+            try {
+                const allPlugins = await fetch("https://deeeep-reef-client.github.io/plugins-api/registry.json")
+                    .then(response => response.json());
+            } catch (e) {
+                pluginsContainer.innerText = "Failed to fetch plugins";
+                themesContainer.innerText = "Failed to fetch themes";
+                alert("Failed to fetch plugins. Please check your Internet and try again.");
+                return;
+            }
 
             const plugins = allPlugins.list.filter(plugin => plugin.type === "plugin");
             const themes = allPlugins.list.filter(plugin => plugin.type === "theme");
-
-            const pluginsContainer = document.getElementById("pluginsContainer");
-            const themesContainer = document.getElementById("themesContainer");
 
             pluginsContainer.innerHTML = "";
             themesContainer.innerHTML = "";
