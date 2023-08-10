@@ -51,8 +51,10 @@
             const pluginsContainer = document.getElementById("pluginsContainer");
             const themesContainer = document.getElementById("themesContainer");
 
+            let allPlugins;
+            
             try {
-                const allPlugins = await fetch("https://deeeep-reef-client.github.io/plugins-api/registry.json")
+                allPlugins = await fetch("https://deeeep-reef-client.github.io/plugins-api/registry.json")
                     .then(response => response.json());
             } catch (e) {
                 pluginsContainer.innerText = "Failed to fetch plugins";
