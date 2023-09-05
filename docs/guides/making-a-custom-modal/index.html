@@ -63,10 +63,12 @@
                                     src="/docs/public/svgs/github-dark.svg" alt="GitHub Link" /></a>
                         </li>
                         <li class="mr-5 flex dark:hidden">
-                            <a href="https://www.youtube.com/watch?v=xpm6i4YMLCs"><img src="/docs/public/svgs/youtube.svg" alt="YouTube Link" /></a>
+                            <a href="https://www.youtube.com/watch?v=xpm6i4YMLCs"><img
+                                    src="/docs/public/svgs/youtube.svg" alt="YouTube Link" /></a>
                         </li>
                         <li class="mr-5 hidden dark:flex">
-                            <a href="https://www.youtube.com/watch?v=xpm6i4YMLCs"><img src="/docs/public/svgs/youtube-dark.svg" alt="YouTube Link" /></a>
+                            <a href="https://www.youtube.com/watch?v=xpm6i4YMLCs"><img
+                                    src="/docs/public/svgs/youtube-dark.svg" alt="YouTube Link" /></a>
                         </li>
                     </ul>
                 </div>
@@ -109,6 +111,9 @@
                         </li>
                         <li class="text-[#111] dark:text-slate-300 pl-[20px] font-[400] border-l-[2px]">
                             <a href="/docs/features/chrome-extensions">Chrome Extensions</a>
+                        </li>
+                        <li class="text-[#111] dark:text-slate-300 pl-[20px] font-[400] border-l-[2px]">
+                            <a href="/docs/features/hotkeys">Hotkeys</a>
                         </li>
                     </ul>
                 </li>
@@ -157,7 +162,8 @@
                 <div class="h-full mt-10">
                     <p class="font-normal text-2xl">Objective</p>
                     <p class="leading-0">
-                        Make a tabbed modal that shows a random picture on one tab and a notes pane on the other tab on a Plugin.
+                        Make a tabbed modal that shows a random picture on one tab and a notes pane on the other tab on
+                        a Plugin.
                     </p>
                 </div>
             </section>
@@ -179,7 +185,8 @@
                 <div class="h-full mt-10">
                     <p class="font-normal text-2xl">Setting Up</p>
                     <p class="leading-0">
-                        You can use an existing Script or create a new Script. Either way, the Script's type must be "domloaded".
+                        You can use an existing Script or create a new Script. Either way, the Script's type must be
+                        "domloaded".
                     </p>
                 </div>
             </section>
@@ -188,12 +195,15 @@
                     <p class="font-normal text-2xl">Writing the Code</p>
                     <p class="font-normal text-xl">Building the Modal</p>
                     <p class="leading-0">
-                        Writing a modal from scratch is complicated and boilerplatey. The <a href="/docs/developer/drc-api" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">DRC API</a> simplifies this a lot.
+                        Writing a modal from scratch is complicated and boilerplatey. The <a
+                            href="/docs/developer/drc-api"
+                            class="font-medium text-blue-600 dark:text-blue-500 hover:underline">DRC API</a> simplifies
+                        this a lot.
                         Insert this code to the end of your Script.
                         <code>
                             const myModal = DRC.Modal.buildModal("", "My Modal", "");
                         </code>
-                        <br/>
+                        <br />
                         This creates a new empty modal with the title of "My Modal".
                     </p>
                     <p class="font-normal text-xl">Building the Tabs</p>
@@ -209,7 +219,7 @@
                             ], myModal);
                             const myModal = DRC.Modal.buildModal("aUniqueId", "My Modal", "");
                         </code>
-                        <br/>
+                        <br />
                         This creates a new empty modal with the ID of "aUniqueId" and title of "My Modal".
                     </p>
                 </div>
