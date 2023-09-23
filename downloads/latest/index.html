@@ -14,10 +14,21 @@
     </style>
     <script type="text/javascript">
         (async () => {
-            var url = await fetch("/api/insturl.txt").then(res => res.text())
-                .catch(err => {
-                    alert("Error fetching installer URL. Please try again or manually download the installer from GitHub Releases.")
-                });
+            var instUrlPath = '';
+            if (navigator.userAgent.includes('Windows')) {
+                instUrlPath = '/api/insturl-win.txt';
+            } else if (navigator.userAgent.includes('Mac')) {
+                instUrlPath = '/api/insturl-mac.txt';
+            } else if (navigator.userAgent.includes('Linux')) {
+                instUrlPath = '/api/insturl-linux.txt';
+            } else {
+                alert('Sorry, but there are only prebuilt binaries for Microsoft Windows, macOS and GNU/Linux. See FAQs for installing on macOS or Linux.');
+                return;
+            }
+            var url = await fetch(instUrlPath).then(res=> res.text())
+            .catch(err => {
+            alert('Error fetching installer URL. Please try again or manually download the installer from GitHub Releases.')
+            });
             if (url) window.location.href = url;
         })();
     </script>
