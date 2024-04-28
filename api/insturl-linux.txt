@@ -1,1 +1,1 @@
-https://github.com/Deeeep-Reef-Client/deeeep-reef-client/releases/download/v1.3.0/Deeeep.io-Reef-Client-1.3.0-linux.AppImage
+https://github.com/Deeeep-Reef-Client/deeeep-reef-client/releases/download/v1.3.1/Deeeep.io-Reef-Client-1.3.1-linux.AppImage
